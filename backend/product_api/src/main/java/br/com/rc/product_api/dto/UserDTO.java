@@ -12,11 +12,6 @@ public class UserDTO implements Serializable {
 
     public UserDTO(){}
 
-    public UserDTO(Long id, String username) {
-        this.id = id;
-        this.username = username;
-    }
-
     public UserDTO(User entity) {
         this.id = entity.getId();
         this.username = entity.getUsername();
