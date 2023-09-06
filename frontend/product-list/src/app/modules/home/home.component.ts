@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { MessageService } from 'primeng/api';
 import { SignupUserRequest } from 'src/app/models/interfaces/user/SignupUserRequest';
+import { AuthRequest } from 'src/app/models/interfaces/user/auth/AuthRequest';
 import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
@@ -21,10 +25,43 @@ export class HomeComponent {
     password: ['', Validators.required]
   });
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService) { }
+  constructor(
+    private formBuilder: FormBuilder, 
+    private userService: UserService,
+    private cookieService: CookieService,
+    private messageService: MessageService,
+    private router: Router
+    ) { }
 
   onSubmitLoginForm(): void {
-    console.log("DADOS DO FORMULARIO", this.loginForm.value);
+    if(this.loginForm.value && this.loginForm.valid) {
+      this.userService.authUser(
+        this.loginForm.value as AuthRequest)
+        .subscribe({
+        next: (response) => {
+          if(response && response.token) {
+            this.cookieService.set('token', response?.token);
+            this.loginForm.reset();
+            this.router.navigate(['/dashboard']);
+            this.messageService.add({
+              severity:'success', 
+              summary: 'Successo', 
+              detail: 'Bem vindo de Volta!',
+              life: 2000,
+            });
+          }
+        },
+        error: (err) => {
+          this.messageService.add({
+            severity:'error', 
+            summary: 'Erro', 
+            detail: 'Erro ao fazer login!',
+            life: 2000,
+          });
+          console.log(err);
+        }
+      });
+    }
   }
 
   onSubmitSignupForm(): void {
@@ -32,12 +69,25 @@ export class HomeComponent {
       this.userService.signupUser(
         this.signupForm.value as SignupUserRequest)
         .subscribe({
-        next: (response) => {
-          if(response) {
-            alert('Usuario teste Criado')
-          }
+          next: (response) => {
+            this.signupForm.reset();
+            this.loginCard = true;
+            this.messageService.add({
+              severity:'success', 
+              summary: 'Successo', 
+              detail: 'Conta criada com sucesso!',
+              life: 2000,
+            });
         },
-        error: (err) => console.log(err)
+        error: (err) => {
+          this.messageService.add({
+            severity:'error', 
+            summary: 'Erro', 
+            detail: 'Erro ao criar conta!',
+            life: 2000,
+          });
+          console.log(err);
+        }
       });
     }
   }
