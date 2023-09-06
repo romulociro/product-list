@@ -8,3 +8,4 @@ INSERT INTO product (name, description, price, img_url, date) VALUES ('Product7'
 INSERT INTO product (name, description, price, img_url, date) VALUES ('Product8', 'Description8', 170.00, 'http://example.com/img8.jpg', NOW());
 INSERT INTO product (name, description, price, img_url, date) VALUES ('Product9', 'Description9', 180.00, 'http://example.com/img9.jpg', NOW());
 INSERT INTO product (name, description, price, img_url, date) VALUES ('Product10', 'Description10', 190.00, 'http://example.com/img10.jpg', NOW());
+INSERT INTO user (username, password) VALUES ('usuario1', '$2a$12$suz3cQPN9SjClekE5AiRh.VyzEKUfXdQaidNA1RV7W3mpi5R.FIiK');
