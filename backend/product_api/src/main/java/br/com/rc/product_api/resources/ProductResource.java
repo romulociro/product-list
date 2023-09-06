@@ -4,10 +4,10 @@ import br.com.rc.product_api.dto.ProductDTO;
 import br.com.rc.product_api.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -21,6 +21,14 @@ public class ProductResource {
     public ResponseEntity<List<ProductDTO>> findAll() {
         List<ProductDTO> list = service.findAll();
         return ResponseEntity.ok().body(list);
+    }
+
+    @PostMapping
+    public ResponseEntity<ProductDTO> create(@RequestBody ProductDTO dto) {
+        dto = service.create(dto);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(dto.getId()).toUri();
+        return ResponseEntity.created(uri).body(dto);
     }
 }
 

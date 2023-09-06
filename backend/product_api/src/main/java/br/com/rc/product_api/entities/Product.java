@@ -1,5 +1,6 @@
 package br.com.rc.product_api.entities;
 
+import br.com.rc.product_api.dto.ProductDTO;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -30,6 +31,15 @@ public class Product implements Serializable {
         this.price = price;
         this.imgUrl = imgUrl;
         this.date = date;
+    }
+
+    public Product(ProductDTO dto) {
+        this.id = dto.getId();
+        this.name = dto.getName();
+        this.description = dto.getDescription();
+        this.price = dto.getPrice();
+        this.imgUrl = dto.getImgUrl();
+        this.date = dto.getDate();
     }
 
     public Long getId() {
