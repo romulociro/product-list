@@ -2,12 +2,12 @@ package br.com.rc.product_api.services;
 
 import br.com.rc.product_api.dto.ProductDTO;
 import br.com.rc.product_api.entities.Product;
+import br.com.rc.product_api.exceptions.ResourceNotFoundException;
 import br.com.rc.product_api.repositories.ProductRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,5 +29,25 @@ public class ProductService {
         Product entity = new Product(dto);
         entity = repository.save(entity);
         return new ProductDTO(entity);
+    }
+
+    @Transactional
+    public ProductDTO update(Long id, ProductDTO dto) {
+        Product entity = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found with id " + id));
+
+        entity.setName(dto.getName());
+        entity.setDescription(dto.getDescription());
+        entity.setPrice(dto.getPrice());
+        entity.setImgUrl(dto.getImgUrl());
+        entity.setDate(dto.getDate());
+
+        entity = repository.save(entity);
+
+        return new ProductDTO(entity);
+    }
+
+    public void delete(Long id) {
+        repository.deleteById(id);
     }
 }
