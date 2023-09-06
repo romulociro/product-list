@@ -10,30 +10,24 @@ public class ProductDTO implements Serializable {
 
     private Long id;
     private String name;
-    private String description;
+    private String supplier;
     private Double price;
-    private String imgUrl;
-    private Instant date;
 
     public ProductDTO() {
     }
 
-    public ProductDTO(Long id, String name, String description, Double price, String imgUrl, Instant date) {
+    public ProductDTO(Long id, String name, String supplier, Double price, String imgUrl, Instant date) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.supplier = supplier;
         this.price = price;
-        this.imgUrl = imgUrl;
-        this.date = date;
     }
 
     public ProductDTO(Product entity) {
         this.id = entity.getId();
         this.name = entity.getName();
-        this.description = entity.getDescription();
+        this.supplier = entity.getSupplier();
         this.price = entity.getPrice();
-        this.imgUrl = entity.getImgUrl();
-        this.date = entity.getDate();
     }
 
     public Long getId() {
@@ -52,12 +46,12 @@ public class ProductDTO implements Serializable {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getSupplier() {
+        return supplier;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setSupplier(String supplier) {
+        this.supplier = supplier;
     }
 
     public Double getPrice() {
@@ -66,21 +60,5 @@ public class ProductDTO implements Serializable {
 
     public void setPrice(Double price) {
         this.price = price;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
-    public Instant getDate() {
-        return date;
-    }
-
-    public void setDate(Instant date) {
-        this.date = date;
     }
 }

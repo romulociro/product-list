@@ -16,30 +16,24 @@ public class Product implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
+    private String supplier;
     private Double price;
-    private String imgUrl;
-    private Instant date;
 
     public Product() {
     }
 
-    public Product(Long id, String name, String description, Double price, String imgUrl, Instant date) {
+    public Product(Long id, String name, String supplier, Double price, String imgUrl, Instant date) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.supplier = supplier;
         this.price = price;
-        this.imgUrl = imgUrl;
-        this.date = date;
     }
 
     public Product(ProductDTO dto) {
         this.id = dto.getId();
         this.name = dto.getName();
-        this.description = dto.getDescription();
+        this.supplier = dto.getSupplier();
         this.price = dto.getPrice();
-        this.imgUrl = dto.getImgUrl();
-        this.date = dto.getDate();
     }
 
     public Long getId() {
@@ -58,12 +52,12 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getSupplier() {
+        return supplier;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setSupplier(String supplier) {
+        this.supplier = supplier;
     }
 
     public Double getPrice() {
@@ -72,22 +66,6 @@ public class Product implements Serializable {
 
     public void setPrice(Double price) {
         this.price = price;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
-    public Instant getDate() {
-        return date;
-    }
-
-    public void setDate(Instant date) {
-        this.date = date;
     }
 
     @Override

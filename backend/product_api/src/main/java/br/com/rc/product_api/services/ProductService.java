@@ -37,10 +37,8 @@ public class ProductService {
                 .orElseThrow(() -> new ResourceNotFoundException("Product not found with id " + id));
 
         entity.setName(dto.getName());
-        entity.setDescription(dto.getDescription());
+        entity.setSupplier(dto.getSupplier());
         entity.setPrice(dto.getPrice());
-        entity.setImgUrl(dto.getImgUrl());
-        entity.setDate(dto.getDate());
 
         entity = repository.save(entity);
 
