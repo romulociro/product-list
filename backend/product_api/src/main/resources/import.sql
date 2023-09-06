@@ -1,0 +1,10 @@
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product1', 'Description1', 100.00, 'http://example.com/img1.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product2', 'Description2', 110.00, 'http://example.com/img2.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product3', 'Description3', 120.00, 'http://example.com/img3.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product4', 'Description4', 130.00, 'http://example.com/img4.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product5', 'Description5', 140.00, 'http://example.com/img5.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product6', 'Description6', 150.00, 'http://example.com/img6.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product7', 'Description7', 160.00, 'http://example.com/img7.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product8', 'Description8', 170.00, 'http://example.com/img8.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product9', 'Description9', 180.00, 'http://example.com/img9.jpg', NOW());
+INSERT INTO product (name, description, price, img_url, date) VALUES ('Product10', 'Description10', 190.00, 'http://example.com/img10.jpg', NOW());
