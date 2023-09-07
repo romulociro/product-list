@@ -52,8 +52,7 @@ $ gradle bootRun
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
-
-Java 17
-Gradle
-Spring Boot 3.0.3
-MySQL
+- [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- [Gradle](https://gradle.org/)
+- [Spring 3.0.3](https://spring.io/)
+- [MySQL](https://www.mysql.com/)
