@@ -46,6 +46,13 @@ $ gradle bootRun
 
 # O servidor inciará na porta:8080 - acesse <http://localhost:8080>
 ```
+
+### 🚀 Acesso Padrão
+Para facilitar os testes e o acesso inicial à aplicação, disponibilizamos um usuário já pré-cadastrado:
+
+- Usuário: usuario1
+- Senha: 123456
+
 ### FrontEnd
 [Frontend Product List](https://github.com/romulociro/product-list/tree/master/frontend/product-list)
 
