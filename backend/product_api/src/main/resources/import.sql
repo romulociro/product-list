@@ -8,4 +8,4 @@ INSERT INTO product (name, supplier, price) VALUES ('Graphic Card RTX 3080', 'NV
 INSERT INTO product (name, supplier, price) VALUES ('RAM 32GB', 'Crucial', 120.00);
 INSERT INTO product (name, supplier, price) VALUES ('USB-C Hub', 'Anker', 40.00);
 INSERT INTO product (name, supplier, price) VALUES ('External HDD 2TB', 'Seagate', 80.00);
-INSERT INTO user (username, password) VALUES ('usuario1', '$2a$12$suz3cQPN9SjClekE5AiRh.VyzEKUfXdQaidNA1RV7W3mpi5R.FIiK');
+INSERT INTO user (username, password) VALUES ('usuario1', '$2y$10$ro8.ujuzZEbYIQCc5j4z8eWiZrpJThXNPGZSwmh9Ey1S6WaX6ZcMa');
