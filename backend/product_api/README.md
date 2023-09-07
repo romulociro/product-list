@@ -46,14 +46,20 @@ $ gradle bootRun
 
 # O servidor inciará na porta:8080 - acesse <http://localhost:8080>
 ```
+
+### 🚀 Acesso Padrão
+Para facilitar os testes e o acesso inicial à aplicação, disponibilizamos um usuário já pré-cadastrado:
+
+- Usuário: usuario1
+- Senha: 123456
+
 ### FrontEnd
-[https://github.com/romulociro/frontend-movieslist](https://github.com/romulociro/product-list/tree/master/frontend/product-list)
+[Frontend Product List](https://github.com/romulociro/product-list/tree/master/frontend/product-list)
 
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
-
-Java 17
-Gradle
-Spring Boot 3.0.3
-MySQL
+- [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- [Gradle](https://gradle.org/)
+- [Spring 3.0.3](https://spring.io/)
+- [MySQL](https://www.mysql.com/)
