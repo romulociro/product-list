@@ -47,7 +47,7 @@ $ gradle bootRun
 # O servidor inciará na porta:8080 - acesse <http://localhost:8080>
 ```
 ### FrontEnd
-[https://github.com/romulociro/frontend-movieslist](https://github.com/romulociro/product-list/tree/master/frontend/product-list)
+[Frontend Product List](https://github.com/romulociro/product-list/tree/master/frontend/product-list)
 
 ### 🛠 Tecnologias
 
