@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { Subject, takeUntil } from 'rxjs';
 import { GetAllProductsResponse } from 'src/app/models/interfaces/products/response/GetAllProductsResponse';
@@ -16,7 +17,8 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
     constructor(
       private productService: ProductsService,
       private messageService: MessageService,
-      private productsDtService: ProductsDataTransferService
+      private productsDtService: ProductsDataTransferService,
+      private router: Router
     ) { }
 
     ngOnInit(): void {
@@ -44,6 +46,10 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
             });
           }
         })
+    }
+
+    navigateToProducts() {
+      this.router.navigate(['/products']);
     }
 
     ngOnDestroy(): void {
