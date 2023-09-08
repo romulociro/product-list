@@ -1,29 +1,37 @@
 ![PRÉVIA](https://i.ibb.co/v36GqMw/pictures-1.jpg)
 
-# ProductList
+# Frontend App Product List (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+## Sobre o projeto
 
-## Development server
+Este é um projeto frontend criado com Angular para gerenciar produtos. A aplicação permite ao usuário criar, listar, editar e excluir produtos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- [x] Cadastro de produtos
+- [x] Listagem de produtos
+- [x] Edição de produtos
+- [x] Exclusão de produtos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pré-requisitos
 
-## Build
+Antes de começar, você precisa ter o [Node.js](https://nodejs.org/en/) e o [Angular CLI](https://cli.angular.io/) instalados em sua máquina. É recomendado o uso de um bom editor de código, como o [VSCode](https://code.visualstudio.com/).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🚀 Rodando o projeto localmente
 
-## Running unit tests
+**Clone o projeto e acesse a pasta**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+$ git clone https://github.com/seuusuario/frontend-app-product-list.git
+$ cd frontend
+$ cd product-list
 
-## Running end-to-end tests
+Instale as dependências
+$ npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Rode a aplicação
+$ ng serve
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Após esses comandos, abra seu navegador e acesse http://localhost:4200/. 
+A aplicação estará rodando!
