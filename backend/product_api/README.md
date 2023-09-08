@@ -16,8 +16,9 @@
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Docker](https://www.docker.com/)
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Git, Java 17, Gradle, MySQL Server
+
+Além disto é bom ter um editor para trabalhar com o código como IntelliJ IDEA ou VSCode.
 
 ### 🎲 Rodando o BackEnd (servidor)
 
